@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
-    "esbuild": "^0.24.2",
+    "esbuild": "^0.28.1",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0",
     "vitest": "^3.0.0"
