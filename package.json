@@ -2,17 +2,37 @@
   "name": "@bytesbrains/llm-cost-control",
   "version": "0.1.0",
   "description": "LLM cost-control layer — response caching, budget gates, model routing, per-tenant metering. The margin-protector for managed AI runs.",
-  "keywords": ["bytesbrains"],
+  "keywords": [
+    "llm",
+    "ai",
+    "cost-control",
+    "caching",
+    "budget",
+    "model-routing",
+    "metering",
+    "bytesbrains"
+  ],
   "author": "BytesBrains Pte Ltd (https://bytesbrains.com)",
-  "repository": { "type": "git", "url": "git+https://github.com/bytesbrains/llm-cost-control.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bytesbrains/llm-cost-control.git"
+  },
   "homepage": "https://github.com/bytesbrains/llm-cost-control#readme",
-  "bugs": { "url": "https://github.com/bytesbrains/llm-cost-control/issues" },
+  "bugs": {
+    "url": "https://github.com/bytesbrains/llm-cost-control/issues"
+  },
   "license": "MIT",
   "type": "module",
-  "engines": { "node": ">=18" },
-  "files": ["dist/", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --outfile=dist/index.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --outfile=dist/index.js && tsc --emitDeclarationOnly",
     "test": "vitest run",
     "dev": "tsx --watch src/index.ts",
     "prepublishOnly": "npm run build && npm test"
@@ -22,5 +42,13 @@
     "tsx": "^4.19.0",
     "typescript": "^5.7.0",
     "vitest": "^4.1.10"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   }
 }
