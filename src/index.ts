@@ -1,1 +1,1 @@
-export const hello = (): string => "@bytesbrains/{{PACKAGE_NAME}}";
+export const hello = (): string => "@bytesbrains/llm-cost-control";

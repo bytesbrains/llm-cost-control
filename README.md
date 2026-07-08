@@ -1,10 +1,10 @@
-# @bytesbrains/{{PACKAGE_NAME}}
+# @bytesbrains/llm-cost-control
 
-[![npm](https://img.shields.io/npm/v/@bytesbrains/{{PACKAGE_NAME}})](https://www.npmjs.com/package/@bytesbrains/{{PACKAGE_NAME}})
-[![CI](https://github.com/bytesbrains/{{PACKAGE_NAME}}/actions/workflows/ci.yml/badge.svg)](https://github.com/bytesbrains/{{PACKAGE_NAME}}/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@bytesbrains/llm-cost-control)](https://www.npmjs.com/package/@bytesbrains/llm-cost-control)
+[![CI](https://github.com/bytesbrains/llm-cost-control/actions/workflows/ci.yml/badge.svg)](https://github.com/bytesbrains/llm-cost-control/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-{{DESCRIPTION}}
+LLM cost-control layer — response caching, budget gates, model routing, per-tenant metering. The margin-protector for managed AI runs.
 
 ## Why
 
@@ -13,7 +13,7 @@
 ## Install
 
 ```bash
-npm install @bytesbrains/{{PACKAGE_NAME}}
+npm install @bytesbrains/llm-cost-control
 ```
 
 ## 60-second usage
