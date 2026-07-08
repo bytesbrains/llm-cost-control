@@ -1,0 +1,26 @@
+{
+  "name": "@bytesbrains/{{PACKAGE_NAME}}",
+  "version": "0.1.0",
+  "description": "{{DESCRIPTION}}",
+  "keywords": ["bytesbrains"],
+  "author": "BytesBrains Pte Ltd (https://bytesbrains.com)",
+  "repository": { "type": "git", "url": "git+https://github.com/bytesbrains/{{PACKAGE_NAME}}.git" },
+  "homepage": "https://github.com/bytesbrains/{{PACKAGE_NAME}}#readme",
+  "bugs": { "url": "https://github.com/bytesbrains/{{PACKAGE_NAME}}/issues" },
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "files": ["dist/", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --outfile=dist/index.js",
+    "test": "vitest run",
+    "dev": "tsx --watch src/index.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
